@@ -146,17 +146,12 @@ const Home = () => {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href="#questions"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Начать
+                Узнать больше
               </a>
-              <a
-                href="#questions"
-                className="text-sm font-semibold leading-6 text-gray-900"
-              >
-                Узнать больше <span aria-hidden="true">→</span>
-              </a>
+              
             </div>
           </div>
         </div>
@@ -200,7 +195,7 @@ const Home = () => {
                 </h3>
                 <p className="text-gray-500 ">
                   Наша команда постоянно работает над обновлением контента на
-                  платформе "Softcode". Мы стремимся добавлять новые
+                  платформе Softcode. Мы стремимся добавлять новые
                   увлекательные уроки и задания, чтобы обеспечивать вас новыми
                   интересными материалами для обучения.
                 </p>
@@ -267,7 +262,7 @@ const Home = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  Могу ли я использовать платформу "Softcode" на мобильном
+                  Могу ли я использовать платформу Softcode на мобильном
                   устройстве?
                 </h3>
                 <p className="text-gray-500 ">
@@ -334,11 +329,11 @@ const Home = () => {
           <img className='hidden lg:block w-[500px] h-[350px]' src={mainPic} alt="" />
           <div>
             <h2 className="mb-8 text-2xl tracking-tight font-extrabold text-gray-900 ">
-              Загрузите приложение "Softcode" уже сегодня!
+              Загрузите приложение Softcode уже сегодня!
             </h2>
             <h3 className="flex  border-t items-center mb-10 text-lg font-medium  
             mt-6 leading-8 text-gray-600 text-justify">
-              "Softcode" предлагает уникальный опыт интерактивного обучения,
+              Softcode предлагает уникальный опыт интерактивного обучения,
               превращая обучение в удивительное приключение, доступное вам
               круглосуточно. Наше приложение создано для тех, кто хочет
               обучаться увлекательно, проходить интересные уроки и отслеживать
