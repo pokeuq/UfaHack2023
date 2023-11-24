@@ -1,15 +1,14 @@
 import React from "react";
+import { Routes, Route, Outlet } from "react-router-dom";
 
 import Home from "./pages/Home";
-
-import { Routes, Route, Outlet } from "react-router-dom";
-// import { Login } from "./pages/Login";
+import Login from "./pages/Login";
 
 function App() {
   return (
     <Routes>
       <Route path="" element={<Home />} />
-      {/* <Route path="/Login" element={<Login />} /> */}
+      <Route path="/login" element={<Login />} />
     </Routes>
   );
 }
