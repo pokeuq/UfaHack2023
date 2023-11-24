@@ -128,7 +128,7 @@ const Home = () => {
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Скачать приложение вы можете тут.{" "}
-              <a href="#" className="font-semibold text-indigo-600">
+              <a href="#download" className="font-semibold text-indigo-600">
                 <span className="absolute inset-0" aria-hidden="true" />
                 :3
               </a>
@@ -152,7 +152,7 @@ const Home = () => {
                 Начать
               </a>
               <a
-                href="#"
+                href="#questions"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 Узнать больше <span aria-hidden="true">→</span>
@@ -174,15 +174,15 @@ const Home = () => {
         </div>
       </div>
 
-      <section id='questions'  className="bg-white ">
+      <section id="questions" className="bg-white ">
         <div className="py-8 px-8 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
           <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 ">
             Frequently asked questions
           </h2>
-          <div className="grid pt-8 text-left border-t border-gray-200   text-justify">
+          <div className="grid pt-8 border-t border-gray-200 text-justify">
             <div className="grid grid-cols-2 gap-10 justify-normal max-md:grid-cols-1">
               <div className="mb-10">
-                {/* Вопрос 1 */}
+                
                 <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 ">
                   <svg
                     className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
@@ -267,7 +267,7 @@ const Home = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  Могу ли я использовать платформу "Учимо" на мобильном
+                  Могу ли я использовать платформу "Softcode" на мобильном
                   устройстве?
                 </h3>
                 <p className="text-gray-500 ">
@@ -325,6 +325,31 @@ const Home = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="download" className="bg-white ">
+        <div className="py-8 px-8 mx-auto max-w-screen-xl lg:flex sm:py-16 lg:px-6 block    ">
+          <img className='hidden lg:block w-[500px] h-[350px]' src={mainPic} alt="" />
+          <div>
+            <h2 className="mb-8 text-2xl tracking-tight font-extrabold text-gray-900 ">
+              Загрузите приложение "Softcode" уже сегодня!
+            </h2>
+            <h3 className="flex  border-t items-center mb-10 text-lg font-medium  
+            mt-6 leading-8 text-gray-600 text-justify">
+              "Softcode" предлагает уникальный опыт интерактивного обучения,
+              превращая обучение в удивительное приключение, доступное вам
+              круглосуточно. Наше приложение создано для тех, кто хочет
+              обучаться увлекательно, проходить интересные уроки и отслеживать
+              свой прогресс в удобное для вас время.
+            </h3>
+            <a
+                href="#"
+                className="rounded-md bg-indigo-600 px-3.5 py-4 text-xl text-center lg:text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 block w-full sm:inline"
+              >
+                Скачать
+              </a>
           </div>
         </div>
       </section>
