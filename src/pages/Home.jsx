@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 import logo from "../assets/images/_Softcode.svg";
 
@@ -15,6 +16,11 @@ const navigation = [
 const Home = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const closePopUp = () => {
+
+  }
+  const emailRef = useRef()
+
   return (
     <div className="bg-white">
       <header className="fixed inset-x-0 top-0 z-50 backdrop-blur-md">
@@ -24,7 +30,6 @@ const Home = () => {
         >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
               <img className="h-8 w-auto max-md:w-40" src={logo} alt="" />
             </a>
           </div>
@@ -43,6 +48,7 @@ const Home = () => {
               <a
                 key={item.name}
                 href={item.href}
+                onClick={closePopUp}
                 className="
               relative after:bg-gray-900 after:absolute after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer
               
@@ -56,7 +62,9 @@ const Home = () => {
             <Link
               to="/login"
               href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="relative after:bg-gray-900 after:absolute after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-4/ after:transition-all after:duration-300 cursor-pointer
+              
+              text-sm font-semibold leading-6 text-gray-900"
             >
               Войти <span aria-hidden="true">&rarr;</span>
             </Link>
@@ -124,7 +132,7 @@ const Home = () => {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl py-32 sm:py-36 lg:py-36">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Скачать приложение вы можете тут.{" "}
@@ -324,9 +332,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="download" className="bg-white ">
-        <div className="py-8 px-8 h-screen   mx-auto max-w-screen-xl lg:flex sm:py-16 lg:px-6 block ">
-          <img className='hidden lg:block self-center w-[500px] h-[350px]' src={mainPic} alt="" />
+      <section  className="bg-white mb-10">
+        <div id="download" className="py-40 px-8 h-screen  mx-auto max-w-screen-xl lg:flex sm:py-60  lg:px-6 block ">
+          <img className='hidden  lg:block self-center w-[500px] h-[350px]' src={mainPic} alt="" />
           <div className="self-center">
             <h2 className="mb-8 text-2xl tracking-tight font-extrabold text-gray-900 ">
               Загрузите приложение Softcode уже сегодня!
