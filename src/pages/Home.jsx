@@ -172,7 +172,7 @@ const Home = () => {
       <section id="questions" className="bg-white ">
         <div className="py-8 px-8 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
           <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 ">
-            Frequently asked questions
+            FAQ
           </h2>
           <div className="grid pt-8 border-t border-gray-200 text-justify">
             <div className="grid grid-cols-2 gap-10 justify-normal max-md:grid-cols-1">
@@ -325,9 +325,9 @@ const Home = () => {
       </section>
 
       <section id="download" className="bg-white ">
-        <div className="py-8 px-8 mx-auto max-w-screen-xl lg:flex sm:py-16 lg:px-6 block    ">
-          <img className='hidden lg:block w-[500px] h-[350px]' src={mainPic} alt="" />
-          <div>
+        <div className="py-8 px-8 h-screen   mx-auto max-w-screen-xl lg:flex sm:py-16 lg:px-6 block ">
+          <img className='hidden lg:block self-center w-[500px] h-[350px]' src={mainPic} alt="" />
+          <div className="self-center">
             <h2 className="mb-8 text-2xl tracking-tight font-extrabold text-gray-900 ">
               Загрузите приложение Softcode уже сегодня!
             </h2>
