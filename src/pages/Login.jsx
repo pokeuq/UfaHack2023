@@ -1,10 +1,30 @@
+import { useState } from 'react';
+import { useAuth } from '../authContext';
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-
+import axios from 'axios';
 import logo from "../assets/images/_Softcode.svg";
 
 
+
 const Form = () => {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const { login } = useAuth();
+
+  const handleLogin = () => {
+    axios.post('http://213.171.5.251/authorization', { email, password })
+      .then(response => {
+        const token = response.data.token;
+        login(token);
+      })
+      .catch(error => {
+        console.error('Login error:', error);
+      });
+
+  };
+
     const emailRef = useRef()
     const passwordRef = useRef()
 
@@ -36,6 +56,8 @@ const Form = () => {
               <div className="mt-2">
                 <input
                   ref={emailRef}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   id="email"
                   name="email"
                   type="email"
@@ -59,6 +81,8 @@ const Form = () => {
               <div className="mt-2">
                 <input
                   ref={passwordRef}
+                  value={password} 
+                  onChange={(e) => setPassword(e.target.value)}
                   id="password"
                   name="password"
                   type="password"
@@ -71,6 +95,7 @@ const Form = () => {
 
             <div>
               <button
+                onClick={handleLogin}
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
