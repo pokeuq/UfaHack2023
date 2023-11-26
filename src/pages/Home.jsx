@@ -16,10 +16,8 @@ const navigation = [
 const Home = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const closePopUp = () => {
-
-  }
-  const emailRef = useRef()
+  const closePopUp = () => {};
+  const emailRef = useRef();
 
   return (
     <div className="bg-white">
@@ -92,14 +90,14 @@ const Home = () => {
                 <XMarkIcon className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
+            <div className="mt-6 flow-root ">
+              <div className="-my-6 divide-y  divide-gray-500/10">
+                <div className="space-y-5 pt-10 pb-5">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      className="-mx-3 block rounded-lg  px-3 py-2 font-semibold leading-7 text-gray-900  text-center bg-gray-100 hover:bg-white"
                     >
                       {item.name}
                     </a>
@@ -108,7 +106,13 @@ const Home = () => {
                 <div className="py-6">
                   <Link
                     to="/login"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 font-semibold leading-7 text-gray-900 text-center 
+                    
+                    bg-indigo-600 hover:bg-indigo-500 focus-visible:outline-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                    
+                    text-white "
+
+                    
                   >
                     Войти
                   </Link>
@@ -119,7 +123,7 @@ const Home = () => {
         </Dialog>
       </header>
 
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <div className="relative isolate  px-6 pt-20 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -132,20 +136,20 @@ const Home = () => {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-36 lg:py-36">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Скачать приложение вы можете тут.{" "}
-              <a href="#download" className="font-semibold text-indigo-600">
-                <span className="absolute inset-0" aria-hidden="true" />
-                :3
-              </a>
-            </div>
-          </div>
+        <div className="mx-auto max-w-2xl  min-h-screen flex flex-col justify-center content-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Учись бесплатно, весело и эффективно !
             </h1>
+            <div className="hidden sm:mb-8 sm:mt-8 sm:flex sm:justify-center">
+              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                Скачать приложение вы можете тут.{" "}
+                <a href="#download" className="font-semibold text-indigo-600">
+                  <span className="absolute inset-0" aria-hidden="true" />
+                  :3
+                </a>
+              </div>
+            </div>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Инновационная образовательная платформа, предлагающая уникальный
               опыт интерактивного обучения в формате игры. Мы стремимся сделать
@@ -155,11 +159,10 @@ const Home = () => {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#questions"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md  px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm bg-indigo-600 hover:bg-indigo-500 focus-visible:outline-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
               >
                 Узнать больше
               </a>
-              
             </div>
           </div>
         </div>
@@ -178,14 +181,13 @@ const Home = () => {
       </div>
 
       <section id="questions" className="bg-white ">
-        <div className="py-8 px-8 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <div className="py-8 px-8 mx-auto max-w-screen-xl min-h-screen flex flex-col justify-center content-center sm:py-16 lg:px-6">
           <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 ">
             FAQ
           </h2>
           <div className="grid pt-8 border-t border-gray-200 text-justify">
             <div className="grid grid-cols-2 gap-10 justify-normal max-md:grid-cols-1">
               <div className="mb-10">
-                
                 <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 ">
                   <svg
                     className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
@@ -203,9 +205,9 @@ const Home = () => {
                 </h3>
                 <p className="text-gray-500 ">
                   Наша команда постоянно работает над обновлением контента на
-                  платформе Softcode. Мы стремимся добавлять новые
-                  увлекательные уроки и задания, чтобы обеспечивать вас новыми
-                  интересными материалами для обучения.
+                  платформе Softcode. Мы стремимся добавлять новые увлекательные
+                  уроки и задания, чтобы обеспечивать вас новыми интересными
+                  материалами для обучения.
                 </p>
               </div>
               <div className="mb-10">
@@ -332,15 +334,24 @@ const Home = () => {
         </div>
       </section>
 
-      <section  className="bg-white mb-10">
-        <div id="download" className="py-40 px-8 h-screen  mx-auto max-w-screen-xl lg:flex sm:py-60  lg:px-6 block ">
-          <img className='hidden  lg:block self-center w-[500px] h-[350px]' src={mainPic} alt="" />
+      <section className="bg-white mb-10">
+        <div
+          id="download"
+          className="py-40 px-8 h-screen min-h-screen  grid place-self-center mx-auto max-w-screen-xl lg:flex sm:py-60  lg:px-6 block "
+        >
+          <img
+            className="hidden  lg:block self-center w-[500px] h-[350px]"
+            src={mainPic}
+            alt=""
+          />
           <div className="self-center">
             <h2 className="mb-8 text-2xl tracking-tight font-extrabold text-gray-900 ">
               Загрузите приложение Softcode уже сегодня!
             </h2>
-            <h3 className="flex  border-t items-center mb-10 text-lg font-medium  
-            mt-6 leading-8 text-gray-600 text-justify">
+            <h3
+              className="flex  border-t items-center mb-10 text-lg font-medium  
+            mt-6 leading-8 text-gray-600 text-justify"
+            >
               Softcode предлагает уникальный опыт интерактивного обучения,
               превращая обучение в удивительное приключение, доступное вам
               круглосуточно. Наше приложение создано для тех, кто хочет
@@ -348,11 +359,12 @@ const Home = () => {
               свой прогресс в удобное для вас время.
             </h3>
             <a
-                href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-4 text-xl text-center lg:text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 block w-full sm:inline"
-              >
-                Скачать
-              </a>
+              href="https://drive.google.com/file/d/1E7HkrL0Q1Pb2vj1mT7UQTIJaHNNIv5t9/view"
+              target="blank"
+              className="rounded-md bg-indigo-600 px-3.5 py-4 text-xl text-center lg:text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 block w-full sm:inline"
+            >
+              Скачать
+            </a>
           </div>
         </div>
       </section>
